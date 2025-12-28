@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apollo Peak | Navidad $9.99 – Última Oportunidad</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body class="bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white min-h-screen">
+  <div class="container mx-auto px-6 py-12 text-center">
+    <h1 class="text-6xl font-black bg-gradient-to-r from-purple-400 via-pink-400 to-orange-400 bg-clip-text text-transparent">
+      APOLLO PEAK
+    </h1>
+    <p class="text-3xl mt-8 text-red-400 animate-pulse font-bold">¡ÚLTIMA OPORTUNIDAD NAVIDAD!</p>
+    <p class="text-7xl mt-8 font-black text-green-400">$9.99</p>
+    <p class="text-2xl mt-4">1000+ Workflows IA Premium + Bot Crypto Divino</p>
+    <p class="text-xl mt-2 text-gray-300">Valor real: $497 → Miles ya ganando $1K+/mes</p>
+    
+    <button id="checkout" class="mt-12 bg-gradient-to-r from-green-600 to-emerald-600 px-16 py-8 rounded-3xl text-4xl font-black hover:scale-105 transition shadow-2xl shadow-green-500/50">
+      COMPRAR AHORA $9.99
+    </button>
+    
+    <p class="mt-12 text-lg">Entrega instantánea • Pago 100% seguro con Stripe</p>
+  </div>
+
+  <script>
+    const stripe = Stripe('pk_live_51ST9cH4YMUnMEYPN03U7ZKjyl1dbwFhksTUTbPEk6LBxblOFlhLSxgYY6zcUk5tnp5BBQYpjjSInzKpUNSlxH8gb00i4BcMyvH');
+    
+    document.getElementById('checkout').addEventListener('click', () => {
+      stripe.redirectToCheckout({
+        sessionId: 'cs_live_a1o3TB4DxaKUe6jKo9N7ibXhmYkD9T6jiLFLqth8Uoj69IglQoeRauf8UP'
+      });
+    });
+  </script>
+</body>
+</html>
